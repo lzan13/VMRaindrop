@@ -2,10 +2,10 @@
 <header {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}} class="tag-header">
     <div class="tag-header-container">
         <div class="tag-nav">
-            {{navigation}}
+            <a href="{{@blog.url}}">HOME</a>
         </div>
         <div class="tag-content">
-            <h1 class="tag-title">{{title}}</h1>
+            <h1 class="tag-title">标签云</h1>
         </div>
         <div class="tag-post-num">
             <i class="fa fa-signal"></i><span>共 <span class="num"></span> 个标签</span>
