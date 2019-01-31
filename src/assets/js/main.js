@@ -51,6 +51,6 @@ function onSuccess(data) {
  * 随机生成博客封面
  */
 function randomSiteCover() {
-    var randomNum = Math.floor(Math.random() * 30 + 1);
-    $('.site-header').css('background-image', "url(" + Maple.blogUrl + "/assets/images/30+wallpaper/bg-cover" + randomNum + ".jpg)");
+    var randomNum = Math.floor(Math.random() * 10);
+    $('.site-header').css('background-image', "url(" + Maple.blogUrl + "/assets/images/cover/cover" + randomNum + ".jpg)");
 }

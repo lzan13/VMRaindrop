@@ -1,16 +1,15 @@
-{{!< default}}
-<header style="background-image: url({{#if tag.feature_image}}{{tag.feature_image }}{{else}}{{@blog.cover_image}}{{/if}})"
-        class="tag-header">
+{{!< default}} <header style="background-image: url({{#if tag.feature_image}}{{tag.feature_image }}{{else}}{{@blog.cover_image}}{{/if}})"
+    class="tag-header">
     <div class="tag-header-container">
-        <div class="tag-nav">
-            <a href="{{@blog.url}}">HOME</a>
+        <div class="top-nav">
+            {{navigation}}
         </div>
         <div class="tag-content">
             <h1 class="tag-title">{{tag.name}}</h1>
             {{#if tag.description}}
-                <h2 class="tag-description">
-                    {{tag.description}}
-                </h2>
+            <h2 class="tag-description">
+                {{tag.description}}
+            </h2>
             {{/if}}
         </div>
         <div class="tag-post-num">
@@ -18,9 +17,9 @@
         </div>
     </div>
 
-</header>
-<div class="site-content">
-    {{> loop}}
-</div>
-{{> footer}}
-{{> copyright}}
+    </header>
+    <div class="site-content">
+        {{> loop}}
+    </div>
+    {{> footer}}
+    {{> copyright}}

@@ -1,34 +1,34 @@
 {
-  "name": "maple",
-  "version": "3.2.1",
+  "name": "VMRaindrop",
+  "version": "2.0.0",
   "engines": {
-    "ghost": ">=1.0.0"
+    "ghost": ">=2.13.0"
   },
-  "description": "A Ghost theme focused on content designed by jerry.mei",
+  "description": "一个基于前人的奉献修改的自用 Ghost 博客主题",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/KINGMJ/maple.git"
+    "url": "git+ssh://git@github.com/lzan13/VMRaindrop.git"
   },
   "keywords": [
     "ghost",
     "blog",
     "theme",
     "ghost-theme",
-    "maple"
+    "VMRaindrop"
   ],
   "author": {
-    "name": "Jerry Mei",
-    "email": "328047478@qq.com",
-    "url": "http://www.maplejoyous.cn"
+    "name": "lzan13",
+    "email": "lzan13@sina.com",
+    "url": "http://www.melove.net"
   },
   "config": {
     "posts_per_page": 9
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KINGMJ/maple/issues"
+    "url": "https://github.com/lzan13/VMRaindrop/issues"
   },
-  "homepage": "https://github.com/KINGMJ/maple#readme",
+  "homepage": "https://github.com/lzan13/VMRaindrop#readme",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
