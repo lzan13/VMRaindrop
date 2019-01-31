@@ -26,23 +26,24 @@
 }
 
 .post-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  width: 100%;
   z-index: 9;
-  a {
-    color: @font-white-color;
-    font-size: 12px;
-    padding: 8px 32px;
-    opacity: 0.8;
-    border: 1px solid #fff;
-    border-radius: 0;
-    background: none;
-    &:hover {
-      background: rgba(255, 255, 255, .2);
-      border-color: rgba(255, 255, 255, .6);
-    }
-  }
+  border-bottom: 1px solid @nav-border-color;
+  background-color: @nav-bg-color;
+  // a {
+  //   color: @font-white-color;
+  //   font-size: 12px;
+  //   padding: 8px 32px;
+  //   opacity: 0.8;
+  //   border: 1px solid #fff;
+  //   border-radius: 0;
+  //   background: none;
+  //   &:hover {
+  //     background: rgba(255, 255, 255, .2);
+  //     border-color: rgba(255, 255, 255, .6);
+  //   }
+  // }
 }
 
 .post-tags {
