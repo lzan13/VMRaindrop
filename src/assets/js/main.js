@@ -7,13 +7,13 @@ $(function () {
     //点击向下的箭头滚动到文章区域
     $('.indicator').click(function () {
         var scrollTop = $('.site-content').offset().top;
-        $('html,body').animate({ scrollTop: scrollTop }, 500);
+        $('html,body').animate({scrollTop: scrollTop}, 500);
     });
 
     //默认滚动到文章列表
     if ($('body').hasClass('paged')) {
         var scrollTop = $('.site-content').offset().top;
-        $('html,body').animate({ scrollTop: scrollTop }, 0);
+        $('html,body').animate({scrollTop: scrollTop}, 0);
         $('.site-header').removeClass('invisible');
     }
 
@@ -52,5 +52,5 @@ function onSuccess(data) {
  */
 function randomSiteCover() {
     var randomNum = Math.floor(Math.random() * 9 + 1);
-    $('.site-header').css('background-image', "url(" + Maple.blogUrl + "/assets/images/cover/cover_bg_" + randomNum + ".jpg)");
+    $('.site-header').css('background-image', "url(" + Maple.blogUrl + "/assets/images/covers/cover_bg_" + randomNum + ".jpg)");
 }

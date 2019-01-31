@@ -15,7 +15,7 @@ gulp.task('less', function () {
             browsers: ['last 2 versions', 'Android >= 4.0'],
             cascade: false
         }))
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('src/assets/css'))
 });
 
@@ -27,7 +27,7 @@ gulp.task('css', function () {
             browsers: ['last 2 versions', 'Android >= 4.0'],
             cascade: false
         }))
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('assets/css'))
 });
 
@@ -38,7 +38,7 @@ gulp.task('main:js', function () {
         'src/assets/js/main.js'])
         .pipe(uglify())
         .pipe(concat('index.js'))
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('assets/js'))
 });
 
@@ -47,21 +47,21 @@ gulp.task('post:js', function () {
         'src/assets/js/clipboard.min.js', 'src/assets/js/post.js'])
         .pipe(uglify())
         .pipe(concat('post.js'))
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('assets/js'))
 });
 
 
 gulp.task('watch_less', function () {
-    return gulp.watch('src/assets/less/**/*.less', ['less', 'css'])
+    gulp.watch('src/assets/less/**/*.less', ['less', 'css'])
 });
 
 gulp.task('watch_css', function () {
-    return gulp.watch('src/assets/css/*.css', ['css'])
+    gulp.watch('src/assets/css/*.css', ['css'])
 });
 
 gulp.task('watch_js', function () {
-    return gulp.watch('src/assets/js/**/*.js', ['main:js', 'post:js'])
+    gulp.watch('src/assets/js/**/*.js', ['main:js', 'post:js'])
 });
 
 

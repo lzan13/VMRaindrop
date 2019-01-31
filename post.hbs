@@ -1,11 +1,13 @@
-{{!< default}} {{#post}} <header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@blog.cover_image}}{{/if}})"
- class="post-header">
-	<div class="post-header-container">
-		<div class="post-nav">
-			{{navigation}}
+{{!< default}}
+{{#post}}
+	<header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@blog.cover_image}}{{/if}})"
+	        class="post-header">
+		<div class="post-header-container">
+			<div class="post-nav">
+				{{navigation}}
+			</div>
+			<div class="post-tags">{{tags separator=""}}</div>
 		</div>
-		<div class="post-tags">{{tags separator=""}}</div>
-	</div>
 	</header>
 	<div class="site-content">
 		<div class="article-wrapper">
@@ -19,7 +21,7 @@
 						<div class="author-content">
 							<div class="author-name">{{primary_author.name}}</div>
 							<div class="post-attr">
-								<time>{{date format="YYYY年MM月DD日 HH:mm"}}</time>
+								<time>{{date format="YYYY年MM月DD日"}}</time>
 								<span class="dotted">•</span>
 								<span>{{reading_time}}</span>
 							</div>
@@ -49,9 +51,9 @@
 	</div>
 	{{> footer}}
 	{{> copyright}}
-	{{/post}}
+{{/post}}
 
-	<div id="show_image_layer" class="hidden"></div>
-	<div id="img_wrapper" class="hidden">
-		<img src="" alt="">
-	</div>
+<div id="show_image_layer" class="hidden"></div>
+<div id="img_wrapper" class="hidden">
+	<img src="" alt="">
+</div>
