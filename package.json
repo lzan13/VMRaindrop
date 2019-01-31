@@ -1,0 +1,41 @@
+{
+  "name": "VMRaindrop",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=2.13.0"
+  },
+  "description": "一个自用的 Ghost 主题项目",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lzan13/VMRaindrop.git"
+  },
+  "keywords": [
+    "ghost",
+    "blog",
+    "theme",
+    "raindrop"
+  ],
+  "author": {
+    "name": "lzan13",
+    "email": "lzan13@sina.com",
+    "url": "http://www.melove.net"
+  },
+  "config": {
+    "posts_per_page": 12
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lzan13/VMRaindrop/issues"
+  },
+  "homepage": "https://github.com/lzan13/VMRaindrop#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^4.0.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-uglify": "^3.0.0"
+  }
+}
