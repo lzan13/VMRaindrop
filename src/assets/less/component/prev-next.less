@@ -1,37 +1,20 @@
 /*-----------------------------上一篇下一篇-------------------------------*/
 .prev-next-wrap {
-  margin: 24px auto;
   display: flex;
+  flex-direction: column;
   max-width: 1000px;
-  .prev-next-item {
-    display: flex;
-    flex: 1 0;
-    justify-content: center;
-    .prev-next-image {
-      width: 64px;
-      height: 64px;
-      background: no-repeat center center;
-      background-size: cover;
-      border-radius: 4px;
-    }
-    .prev-next-content {
-      margin-left: 20px;
-      .link {
-        color: #fff;
-        background-color: @link-color;
-        padding: 0 10px;
-        border-radius: 10px;
-        display: inline-block;
-        margin-bottom: 10px;
-      }
-      .title {
-        display: block;
-      }
-      .date {
-        font-style: italic;
-        font-family: 'consolas';
-        color: @font-grey-color;
-        margin-top: 8px;
+  margin: 24px auto;
+  .prev-item{
+    float: left;
+  }
+  .next-item{
+    float:right;
+  }
+  .prev-content.next-content{
+    a{
+      color: @subtitle-dark-color;
+      &:hover{
+        color:@link-color;
       }
     }
   }
