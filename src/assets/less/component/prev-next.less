@@ -5,12 +5,21 @@
   max-width: 1000px;
   margin: 24px auto;
   .prev-item{
-    float: left;
+    flex-grow:1;
+    .iconfont{
+      font-size:24px;
+      color: @active-link-color;
+    }
+    a{
+      color: @subtitle-dark-color;
+      &:hover{
+        color: @active-link-color;
+      }
+    }
   }
   .next-item{
-    float:right;
-  }
-  .prev-content.next-content{
+    flex-grow:1;
+    align-content: flex-end;
     .iconfont{
       font-size:24px;
       color: @active-link-color;
