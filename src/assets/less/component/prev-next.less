@@ -3,11 +3,14 @@
   display: flex;
   flex-direction: row;
   max-width: 1000px;
-  margin: 24px auto;
+  margin: 20px auto;
   .prev-item{
     flex-grow:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     .iconfont{
-      font-size:24px;
+      font-size:20px;
       color: @active-link-color;
     }
     a{
@@ -19,9 +22,11 @@
   }
   .next-item{
     flex-grow:1;
-    align-content: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     .iconfont{
-      font-size:24px;
+      font-size:20px;
       color: @active-link-color;
     }
     a{
