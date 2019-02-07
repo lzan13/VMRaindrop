@@ -49,6 +49,7 @@
     }
   }
 }
+
 // 文章底部作者信息图标
 .post-author-social {
   list-style: none;
@@ -59,9 +60,12 @@
     padding: 8px;
     a {
       font-size: 24px;
-      color: @font-grey-color;
+      color: @inactive-dark-color;
+      .iconfont{
+        font-size: 24px;
+      }
       &:hover {
-        color: #333;
+        color: @active-dark-color;
       }
     }
   }

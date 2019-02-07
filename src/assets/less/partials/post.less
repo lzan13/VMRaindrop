@@ -134,19 +134,18 @@
   }
 }
 
-#back_to_top {
+#got-to-top {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
   width: 48px;
   height: 48px;
-  display: none;
-  background: url("../images/rocket.png") no-repeat center center rgba(0, 0, 0, 0.55);
-  border-radius: 4px;
-  background-size: 80%;
+  right: 32px;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  border-radius: 48px;
+  background: @inactive-dark-color;
   &:hover {
-    background: url("../images/rocket.png") no-repeat center center rgba(0, 0, 0, 0.35);
-    background-size: 80%;
+    background: @active-dark-color;
   }
 }
 
