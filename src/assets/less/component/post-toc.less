@@ -45,7 +45,7 @@
 }
 
 #toc {
-  color: @font-black-color;
+  color: @title-dark-color;
   padding-top: 48px;
   ul {
     margin: 0;
@@ -56,14 +56,14 @@
     }
   }
   a {
-    color: @font-black-color;
+    color: @title-dark-color;
     text-decoration: none;
     display: block;
     transition: none;
     border-left: 3px solid transparent;
     padding-left: 10px;
     &:hover {
-      color: @link-color;
+      color: @active-link-color;
     }
   }
   .toc-h2 {
@@ -73,12 +73,12 @@
     padding-left: 24px;
   }
   .toc-active {
-    border-left: 4px solid @link-color;
-    color: @link-color;
+    border-left: 4px solid @active-link-color;
+    color: @active-link-color;
     background-color: @toc-bg-color;
     margin-left: -2px;
     a {
-      color: @link-color;
+      color: @active-link-color;
       margin-left: -2px;
     }
   }
