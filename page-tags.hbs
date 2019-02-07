@@ -1,5 +1,5 @@
 {{!< default}}
-<header {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}} class="tag-header">
+<header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@blog.cover_image}}{{/if}})" class="tag-header">
     <div class="tag-nav">
 		{{navigation}}
     </div>
