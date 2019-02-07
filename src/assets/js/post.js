@@ -18,7 +18,7 @@ $(function () {
     }
 
     //显示或关闭侧边栏
-    $('.slide-toc-btn').click(function (e) {
+    $('.toc-btn').click(function (e) {
         if ($(e.currentTarget).hasClass('show-toc')) {
             hideSlide(e);
         } else {
@@ -36,12 +36,12 @@ $(function () {
     //回到顶部
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 300) {
-            $('#got-to-top').fadeIn(300);
+            $('#go-to-top').fadeIn(300);
         } else {
-            $('#got-to-top').fadeOut(300);
+            $('#go-to-top').fadeOut(300);
         }
     });
-    $('#got-to-top').click(function () {
+    $('#go-to-top').click(function () {
         $('html,body').animate({scrollTop: '0px'}, 600);
         return false;
     });
