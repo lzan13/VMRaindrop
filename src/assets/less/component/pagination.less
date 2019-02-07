@@ -27,14 +27,19 @@
           margin-top: 2px;
         }
         a {
-          color: @font-grey-color;
+          display: flex;
+          align-items: center;
+          color: @inactive-dark-color;
           padding: 0 2px;
           &:hover {
             color: @link-color;
             text-decoration: none;
           }
           span {
-            padding: 0 8px;
+            padding: 0 2px;
+          }
+          .iconfont{
+            color: @active-link-color;
           }
         }
       }
