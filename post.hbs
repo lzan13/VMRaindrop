@@ -6,6 +6,12 @@
 			{{navigation}}
 		</div>
 		<div class="post-header-container">
+			<div class="post-title">{{title}}</div>
+			<div class="post-attr">
+				<i class="iconfont icon-time"></i><time>{{date format="YYYY年MM月DD日"}}</time>
+				<span class="dotted">•</span>
+				<span>{{reading_time}}</span>
+			</div>
 			<div class="post-tags">{{tags separator=""}}</div>
 		</div>
 	</header>
@@ -13,20 +19,6 @@
 		<div class="article-wrapper">
 			<div class="article-left">
 				<div class="article-content">
-					<div class="post-title">{{title}}</div>
-					<div class="post-author">
-						<div class="author-avatar">
-							<img src="{{img_url primary_author.profile_image}}" alt="">
-						</div>
-						<div class="author-content">
-							<div class="author-name">{{primary_author.name}}</div>
-							<div class="post-attr">
-								<i class="iconfont icon-time"></i><time>{{date format="YYYY年MM月DD日"}}</time>
-								<span class="dotted">•</span>
-								<span>{{reading_time}}</span>
-							</div>
-						</div>
-					</div>
 					<article class="md-preview">
 						{{content}}
 					</article>
