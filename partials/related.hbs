@@ -5,7 +5,7 @@
 				<div class="related-post-title">相关文章</div>
 				<div class="related-post-list">
 					{{#foreach related}}
-						<a href="{{url}}" style="background-image: url({{feature_image}})">
+						<a href="{{url}}" style="background-image: url({{#if feature_image}}{{feature_image}} {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})">
 							<p>{{title}}</p>
 						</a>
 					{{/foreach}}

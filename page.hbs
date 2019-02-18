@@ -1,0 +1,32 @@
+{{!< default}}
+{{!-- 文章详情页 --}}
+{{#post}}
+<header style="background-image: url({{@blog.cover_image}})" class="header-small animated fadeIn">
+	<div class="header-top-nav">
+		{{navigation}}
+	</div>
+	<div class="header-middle">
+		<div class="header-middle-content animated fadeInUp">
+			<h2 class="header-title">{{title}}</h2>
+		</div>
+	</div>
+</header>
+<div class="site-content">
+	<div class="article-wrapper">
+		<div class="article-left">
+			<div class="article-content">
+				<article class="md-preview">
+					{{content}}
+				</article>
+			</div>
+		</div>
+	</div>
+</div>
+{{/post}}
+
+{{> copyright}}
+
+<div id="show-image-layer" class="hidden"></div>
+<div id="show-image-wrapper" class="hidden">
+	<img src="" alt="">
+</div>

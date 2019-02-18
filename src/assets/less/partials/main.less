@@ -1,12 +1,13 @@
 body {
   font-family: lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  background-color: @background-color;
+  background-color: @bg-light;
 }
 
 .site-content {
-  padding-top: 25px;
-  margin-bottom: 48px;
+  padding-top: 24px;
+  margin-bottom: 36px;
   overflow-x: hidden;
+  flex-grow: 1;
 }
 
 a {
@@ -17,7 +18,7 @@ a {
     text-decoration: none;
   }
   &:hover {
-    color: @active-link-color;
+    color: @active-link;
     text-decoration: none;
   }
   &:active {
@@ -29,7 +30,7 @@ a {
   }
 }
 
-#show_image_layer {
+#show-image-layer {
   position: fixed;
   left: 0;
   right: 0;
@@ -42,7 +43,7 @@ a {
   opacity: 0.75;
 }
 
-#img_wrapper {
+#show-image-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -57,7 +58,7 @@ a {
   overflow: auto;
 }
 
-#img_wrapper img {
+#show-image-wrapper img {
   cursor: zoom-out;
   max-width: 100%;
 }

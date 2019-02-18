@@ -1,10 +1,19 @@
 {
-  "name": "VMRaindrop",
-  "version": "1.0.0",
-  "engines": {
-    "ghost": ">=2.0.0"
-  },
+  "name": "vmraindrop",
   "description": "一个修改自前人的 Ghost 自用主题",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "lzan13",
+    "email": "lzan13@sina.com",
+    "url": "http://www.melove.net"
+  },
+  "engines": {
+    "ghost-api": "v2"
+  },
+  "config": {
+    "posts_per_page": 6
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lzan13/VMRaindrop.git"
@@ -17,15 +26,6 @@
     "vmloft",
     "raindrop"
   ],
-  "author": {
-    "name": "lzan13",
-    "email": "lzan13@sina.com",
-    "url": "http://www.melove.net"
-  },
-  "config": {
-    "posts_per_page": 6
-  },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lzan13/VMRaindrop/issues"
   },

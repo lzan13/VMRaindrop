@@ -1,39 +1,57 @@
+// 
 // 通用文本颜色
 // 亮色
-@title-light-color: #fefefe;
-@subtitle-light-color:#e8e8e8;
-@desc-light-color: #aeaeae;
+@text-light: #fefefe;
+@title-light: #fefefe;
+@subtitle-light:#e8e8e8;
+@desc-light: #aeaeae;
 // 暗色
-@title-dark-color:#363636;
-@subtitle-dark-color:#525252;
-@desc-dark-color: #747474;
+@text-dark: #363636;
+@title-dark: #363636;
+@subtitle-dark: #525252;
+@desc-dark: #747474;
 
 // 活动相关颜色
-@inactive-light-color: #e8e8e8;
-@inactive-dark-color: rgba(54, 54, 54, .6);
+@inactive-light: #e8e8e8;
+@inactive-dark: rgba(54, 54, 54, .6);
 
-@active-light-color: #fefefe;
-@active-dark-color: rgba(54, 54, 54, .8);
+@active-light: #fefefe;
+@active-dark: rgba(54, 54, 54, .8);
 
 // 超链接激活颜色
-@active-link-color: #f69f68;
+@active-link: #f69f68;
 
 // Copyright 颜色配置
-@copyright-bg-color: #ffffff;
-@copyright-color: #C8C8C8;
+@copyright-bg: rgba(54, 54, 54, .6);;
+@copyright-text: #a8a8a8;
 
 // 半透明导航背景
-@top-nav-color: rgba(54, 54, 54, 0.6);
+@top-nav-bg: rgba(54, 54, 54, 0.6);
+@side-nav-bg: rgba(222, 222, 222, 0.6);
 
-@label-light-color: #fefefe;
-@label-dark-color:#363636;
+@label-bg-light: #f8f8f8;
+@label-bg-dark: #9a9a9a;
+@label-light: #fefefe;
+@label-dark: #898989;
 
 //背景色
-@background-color: #fefefe;
-@toc-bg-color: #efefef;
+@bg-light: #fefefe;
+@bg-toc: #efefef;
 
 // 装饰间隔颜色
-@decoration-color: #e8e8e8;
+@decoration: #e8e8e8;
 
-@text-shadow-color: #595959;
-@text-shadow-hover-color: #000;
+@text-shadow: #595959;
+@text-shadow-hover: #363636;
+
+// 封装阴影效果
+.box-shadow(@x:0px, @y: 5px, @blur: 24px, @size:2px, @alpha: 0.08){
+    box-shadow: @x @y @blur @size rgba(30, 30, 30, @alpha);
+    -webkit-box-shadow: @x @y @blur @size rgba(30, 30, 30, @alpha);
+}
+.card-shadow(){
+    .box-shadow(0px, 5px, 24px, 2px, 0.08)
+}
+.card-shadow-hover(){
+    .box-shadow(0px, 5px, 36px, 2px, 0.2)
+}

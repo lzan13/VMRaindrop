@@ -52,7 +52,7 @@ $(function () {
     });
 
     //退出大图模式
-    $('#img_wrapper').click(function () {
+    $('#show-image-wrapper').click(function () {
         exitFullScreen();
     });
 
@@ -88,18 +88,18 @@ function addBlankTargetForLinks() {
 }
 
 function showFullScreenImg(e) {
-    $('#show_image_layer,#img_wrapper').removeClass('hidden');
+    $('#show-image-layer,#show-image-wrapper').removeClass('hidden');
     var img_src = $(e.target).attr('src');
-    $('#img_wrapper img').attr('src', img_src);
+    $('#show-image-wrapper img').attr('src', img_src);
     $('body').css('overflow', 'hidden');
 }
 
 function exitFullScreen() {
-    if ($('#show_image_layer').hasClass('hidden')) {
+    if ($('#show-image-layer').hasClass('hidden')) {
         return;
     }
-    $('#show_image_layer,#img_wrapper').addClass('hidden');
-    $('#img_wrapper img').attr('src', '');
+    $('#show-image-layer,#show-image-wrapper').addClass('hidden');
+    $('#show-image-wrapper img').attr('src', '');
     $('body').removeAttr('style');
 }
 

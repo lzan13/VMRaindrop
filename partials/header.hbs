@@ -1,15 +1,13 @@
-<header style="background-image: url({{@blog.cover_image}})" class="site-header animated fadeIn">
+<header style="background-image: url({{@blog.cover_image}})" class="header-big animated fadeIn">
     <div class="header-top-nav">
         {{navigation}}
     </div>
     <div class="header-middle">
         <div class="header-middle-content animated fadeInUp">
-            <a href="{{@blog.url}}" class="site-title">{{@blog.title}}</a>
-            <h4 class="site-description">{{@blog.description}}</h4>
-            <nav class="site-social-navigation">
-                <ul>
-                    {{> custom/social-icon}}
-                </ul>
+            <a href="{{@blog.url}}" class="header-title">{{@blog.title}}</a>
+            <h4 class="header-description">{{@blog.description}}</h4>
+            <nav class="header-social-icon">
+                <ul>{{> custom/social-icon}}</ul>
             </nav>
         </div>
     </div>

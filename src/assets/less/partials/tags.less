@@ -1,0 +1,30 @@
+// ------------------------------------------------
+// 标签云样式表
+// ------------------------------------------------
+.header-tags{
+    width: 100%;
+    max-width: 1200px;
+    padding: 24px;
+    a {
+        margin: 8px;
+        padding: 8px 16px;
+        border-radius: 24px;
+        background: @label-bg-light;
+        color: @label-dark;
+        font-size: 14px;
+        display: inline-block;
+        span{
+            color: @active-link;
+            margin-left: 8px;
+        }
+        &:hover {
+            text-decoration: none;
+            background: @active-link;
+            color: @label-light;
+            span{
+                color: @label-light;
+            }
+        }
+    }
+}
+

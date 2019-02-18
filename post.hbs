@@ -1,50 +1,53 @@
 {{!< default}}
+{{!-- 文章详情页 --}}
 {{#post}}
-	<header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@blog.cover_image}}{{/if}})"
-	        class="post-header">
-		<div class="post-nav">
-			{{navigation}}
-		</div>
-		<div class="post-header-container">
-			<div class="post-title">{{title}}</div>
-			<div class="post-attr">
+<header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@blog.cover_image}}{{/if}})"
+	class="header-small animated fadeIn">
+	<div class="header-top-nav">
+		{{navigation}}
+	</div>
+	<div class="header-middle">
+		<div class="header-middle-content animated fadeInUp">
+			<h2 class="header-title">{{title}}</h2>
+			<div class="header-post-info">
 				<i class="iconfont icon-time"></i><time>{{date format="YYYY年MM月DD日"}}</time>
 				<span class="dotted">•</span>
 				<span>{{reading_time}}</span>
 			</div>
-			<div class="post-tags">{{tags separator=""}}</div>
 		</div>
-	</header>
-	<div class="site-content">
-		<div class="article-wrapper">
-			<div class="article-left">
-				<div class="article-content">
-					<article class="md-preview">
-						{{content}}
-					</article>
-				</div>
-			</div>
-			<nav class="navbar-side hidden">
-				<div class="toc-wrapper">
-					<a class="toc-btn">
-						<span class="iconfont icon-toc"></span>
-					</a>
-					<div id="toc"></div>
-				</div>
-			</nav>
-		</div>
-		<div class="post-footer">
-			{{> post-author}}
-			{{> prev-next}}
-			{{> related}}
-		</div>
-		<a id="go-to-top" href="#"><span class="iconfont icon-top"></span></a>
 	</div>
-	{{!-- {{> footer}} --}}
-	{{> copyright}}
+	<div class="header-post-tags">{{tags separator=""}}</div>
+</header>
+<div class="site-content">
+	<div class="article-wrapper">
+		<div class="article-left">
+			<div class="article-content">
+				<article class="md-preview">
+					{{content}}
+				</article>
+			</div>
+		</div>
+		<nav class="navbar-side hidden">
+			<div class="toc-wrapper">
+				<a class="toc-btn">
+					<span class="iconfont icon-toc"></span>
+				</a>
+				<div id="toc"></div>
+			</div>
+		</nav>
+	</div>
+	<div class="post-footer">
+		{{> post-author}}
+		{{> prev-next}}
+		{{> related}}
+	</div>
+	<a id="go-to-top" href="#"><span class="iconfont icon-top"></span></a>
+</div>
+{{!-- 引入版权部分 --}}
+{{> copyright}}
 {{/post}}
 
-<div id="show_image_layer" class="hidden"></div>
-<div id="img_wrapper" class="hidden">
+<div id="show-image-layer" class="hidden"></div>
+<div id="show-image-wrapper" class="hidden">
 	<img src="" alt="">
 </div>

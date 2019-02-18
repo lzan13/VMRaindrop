@@ -1,8 +1,10 @@
-.site-header {
+// ------------------------------------------------
+// 博客页面头部公共部分样式表
+// ------------------------------------------------
+.header-big, .header-small {
   background: no-repeat center center;
   background-size: cover;
   position: relative;
-  height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -19,13 +21,22 @@
   }
 }
 
+.header-big{
+  height: 100vh;
+}
+.header-small{
+  height: 40vh;
+}
+
+// 页面头部导航
 .header-top-nav {
   position: fixed;
   width: 100%;
   z-index: 9;
-  background-color: @top-nav-color;
+  background-color: @top-nav-bg;
 }
 
+// 页面头部居中部分
 .header-middle {
   display: flex;
   height: 100%;
@@ -36,21 +47,87 @@
   text-align: center;
   position: relative;
 }
-
-.site-title, .site-description {
+// 页面头部标题和描述
+.header-title, .header-description {
   font-weight: lighter;
-  color: @title-light-color;
-  text-shadow: 0 1px 1px @text-shadow-color;
+  color: @title-light;
+  text-shadow: 0 1px 2px @text-shadow;
   letter-spacing: 6px;
-  padding-top: 20px;
+  padding: 16px;
+  &:hover{
+    color: @subtitle-light;
+    text-shadow: 0 1px 5px @text-shadow-hover;
+    text-decoration: none;
+  }
 }
 
-.site-title {
-  font-size: 48px;
+.header-title {
+  width: 100%;
+  max-width: 1200px;
+  font-size: 42px;
 }
 
-.header-middle-content a:hover, .site-description:hover {
-  color: @subtitle-light-color;
-  text-shadow: 0 1px 1px @text-shadow-hover-color;
+.header-middle-content a:hover{
+  color: @subtitle-light;
+  text-shadow: 0 1px 5px @text-shadow-hover;
   text-decoration: none;
+}
+
+// ------------------------------------------------
+// 页面头部特有内容样式表
+// ------------------------------------------------
+
+
+// ------------------------------------------------
+// 标签头部特有内容样式表
+// ------------------------------------------------
+.header-post-num {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  max-width: 1200px;
+  color: @text-light;
+}
+
+.header-post-num i {
+  margin-right: 4px;
+}
+
+
+// ------------------------------------------------
+// 文章头部特有内容样式表
+// ------------------------------------------------
+.header-post-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: @desc-light;
+  .iconfont{
+    padding: 0 2px;
+  }
+  .dotted {
+    margin: 0 4px;
+  }
+}
+
+.header-post-tags {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  max-width: 1200px;
+  a {
+    margin: 0 4px 4px 0;
+    padding: 2px 8px;
+    border-radius: 24px;
+    background: @label-bg-light;
+    color: @label-dark;
+    font-size: 13px;
+    display: inline-block;
+    &:hover {
+      text-decoration: none;
+      background: @active-link;
+      color: @label-light;
+    }
+  }
 }

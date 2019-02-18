@@ -1,3 +1,4 @@
+// 
 var gulp = require('gulp');
 var less = require('gulp-less');
 var concat = require('gulp-concat');
@@ -41,7 +42,6 @@ gulp.task('main:js', function () {
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('assets/js'))
 });
-
 gulp.task('post:js', function () {
     return gulp.src(['src/assets/js/highlight.pack.js', 'src/assets/js/toc.js',
         'src/assets/js/clipboard.min.js', 'src/assets/js/post.js'])

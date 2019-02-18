@@ -15,37 +15,21 @@
   top: 48px;
   height: 36px;
   line-height: 36px;
-  background: @inactive-dark-color;
-  color: @inactive-light-color;
+  background: @inactive-dark;
+  color: @inactive-light;
   cursor: pointer;
   text-align: center;
   .iconfont{
     font-size: 24px;
   }
   &:hover{
-    background: @active-link-color;
-    color: @active-light-color;
+    background: @active-link;
+    color: @active-light;
   }
-  // span {
-  //   &:first-child {
-  //     width: 1px;
-  //     display: inline-block;
-  //     margin-left: -11px;
-  //     margin-top: 8px;
-  //   }
-  //   &:last-child {
-  //     width: 0;
-  //     height: 0;
-  //     border-left: 15px solid transparent;
-  //     border-right: 15px solid transparent;
-  //     border-bottom: 16px solid @background-color;
-  //     position: relative;
-  //   }
-  // }
 }
 
 #toc {
-  color: @title-dark-color;
+  color: @title-dark;
   padding-top: 48px;
   ul {
     margin: 0;
@@ -56,14 +40,14 @@
     }
   }
   a {
-    color: @title-dark-color;
+    color: @title-dark;
     text-decoration: none;
     display: block;
     transition: none;
     border-left: 3px solid transparent;
     padding-left: 10px;
     &:hover {
-      color: @active-link-color;
+      color: @active-link;
     }
   }
   .toc-h2 {
@@ -73,12 +57,12 @@
     padding-left: 24px;
   }
   .toc-active {
-    border-left: 4px solid @active-link-color;
-    color: @active-link-color;
-    background-color: @toc-bg-color;
+    border-left: 4px solid @active-link;
+    color: @active-link;
+    background-color: @bg-toc;
     margin-left: -2px;
     a {
-      color: @active-link-color;
+      color: @active-link;
       margin-left: -2px;
     }
   }

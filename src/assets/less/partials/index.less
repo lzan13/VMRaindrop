@@ -1,40 +1,48 @@
-.home-template .site-content {
-  min-height: 100vh;
-}
+// ------------------------------------------------
+// 文章底部作者信息图标
+// ------------------------------------------------
+// .home-template .site-content {
+//   min-height: 100vh;
+// }
 
-.tag-template .site-content {
-  min-height: 52vh;
-}
+// .tag-template .site-content {
+//   min-height: 52vh;
+// }
 
 .site-content .post {
   margin-bottom: 30px;
   padding: 0 15px;
 }
 
+// 文章卡片
 .post-card {
-  border-radius: 4px;
-  box-shadow: 0px 5px 36px 8px rgba(30, 30, 30, .08);
+  border-radius: 8px;
   transition: all 0.4s ease;
+  .card-shadow();
+  &:hover {
+    .card-shadow-hover();
+  }
 }
 
-.post-card:hover {
-  box-shadow: 0 5px 48px 8px rgba(30, 30, 30, .12);
-}
-
+// 文章封面图
 .post-cover {
   position: relative;
   overflow: hidden;
   height: 260px;
   width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   .cover-image {
     display: block;
-    background: no-repeat center center;
-    background-size: cover;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-size: cover;
+    background: no-repeat center center;
     &:after {
       .cover-mixin;
       background: linear-gradient(to bottom, rgba(56, 56, 56, 0) 0, rgba(56, 56, 56, .25) 100%);
@@ -52,44 +60,48 @@
   }
 }
 
+// 封面底部
 .cover-bottom {
   position: absolute;
   bottom: 0;
   display: block;
   width: 100%;
-  background: linear-gradient(transparent, #2E2E2E);
-  padding: 20px 0;
+  background: linear-gradient(transparent, @label-bg-dark);
+  padding: 24px 0;
 }
 
+// 文章标签
 .post-tags {
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 0 8px;
+  padding: 4px;
   a {
-    margin: 0 5px 5px 0;
-    padding: 0 6px;
-    border-radius: 2px;
-    background: rgba(255, 255, 255, .35);
-    color: @desc-light-color;
+    margin: 0 4px 4px 0;
+    padding: 2px 8px;
+    border-radius: 24px;
+    background: @label-bg-light;
+    color: @label-dark;
     font-size: 13px;
     display: inline-block;
     &:hover {
       text-decoration: none;
-      background: rgba(255, 255, 255, .25);
+      background: @active-link;
+      color: @label-light;
     }
   }
 }
 
-/*post详情*/
+// 文章信息
 .post-info {
-  background-color: #fcfcfc;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 16px;
   height: 210px;
   font-family: '-apple-system', 'Open Sans', 'Microsoft YaHei', sans-serif;
+  background-color: @bg-light;
+  border-radius: 8px;
   .post-title {
     font-size: 18px;
     margin: 0;
@@ -98,7 +110,7 @@
     a {
       color: #333;
       &:hover {
-        color: #179BB2;
+        color: @active-link;
         text-decoration: none;
       }
     }
