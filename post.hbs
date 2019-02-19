@@ -38,8 +38,8 @@
 	</div>
 	<div class="post-footer">
 		{{> post-author}}
-		{{> prev-next}}
-		{{> related}}
+		{{> post-prev-next}}
+		{{> post-recommend}}
 	</div>
 	<a id="go-to-top" href="#"><span class="iconfont icon-top"></span></a>
 </div>
@@ -48,8 +48,7 @@
 {{!-- 引入版权信息 --}}
 {{> copyright}}
 
+{{!-- 大图展示图层 --}}
 <div id="show-image-layer" class="is-hidden">
 	<img src="" alt="">
 </div>
-{{!-- <div id="show-image-wrapper" class="hidden"> --}}
-{{!-- </div> --}}

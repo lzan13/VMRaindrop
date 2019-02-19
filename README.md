@@ -1,11 +1,11 @@
 VMRaindrop
 ========
 
-一个修改自前人的 Ghost 自用主题
+一个 Ghost 自用主题
 
-### 使用
-[使用教程](./Maple-README.md)
+### 更新
 
+- v1.1.0 修改使用 typo.css 作为文章默认样式模板
 
 ### 感谢
 
