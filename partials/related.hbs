@@ -1,16 +1,15 @@
 {{#get "posts" limit="4" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" as |related|}}
-	{{#if related.length}}
-		<div class="row related-posts-wrapper">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="related-post-title">相关文章</div>
-				<div class="related-post-list">
-					{{#foreach related}}
-						<a href="{{url}}" style="background-image: url({{#if feature_image}}{{feature_image}} {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})">
-							<p>{{title}}</p>
-						</a>
-					{{/foreach}}
-				</div>
-			</div>
-		</div>
-	{{/if}}
+{{#if related.length}}
+<div class="related-posts-wrapper">
+	<div class="related-post-title">相关文章</div>
+	<div class="related-post-list">
+		{{#foreach related}}
+		<a href="{{url}}"
+			style="background-image: url({{#if feature_image}}{{feature_image}} {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})">
+			<p>{{title}}</p>
+		</a>
+		{{/foreach}}
+	</div>
+</div>
+{{/if}}
 {{/get}}

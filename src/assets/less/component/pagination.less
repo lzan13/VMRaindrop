@@ -1,46 +1,47 @@
-/*----------------------------------分页器-------------------------------------*/
+// ------------------------------------------------
+// 分页器
+// ------------------------------------------------
 .post-list-pagination {
-  padding: 8px;
-  margin-top: 24px;
-  .post-navigation {
-    margin: 0 15px;
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      text-align: center;
-      color: @desc-dark;
-      li {
-        display: inline-block;
-        font-family: "Josefin Sans", sans-serif;
-        font-size: 12px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-weight: bold;
-        word-spacing: 2px;
-        &.nav-previous {
-          float: left;
-          margin-top: 2px;
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 16px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    color: @desc-dark;
+    li {
+      display: inline-block;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: bold;
+      word-spacing: 2px;
+      &.nav-previous {
+        float: left;
+        margin-top: 2px;
+      }
+      &.nav-next {
+        float: right;
+        margin-top: 2px;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: @inactive-dark;
+        padding: 0 2px;
+        &:hover {
+          color: @active-link;
+          text-decoration: none;
         }
-        &.nav-next {
-          float: right;
-          margin-top: 2px;
-        }
-        a {
-          display: flex;
-          align-items: center;
-          color: @inactive-dark;
+        span {
           padding: 0 2px;
-          &:hover {
-            color: @active-link;
-            text-decoration: none;
-          }
-          span {
-            padding: 0 2px;
-          }
-          .iconfont{
-            color: @active-link;
-          }
+        }
+        .iconfont{
+          color: @active-link;
         }
       }
     }

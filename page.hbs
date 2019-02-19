@@ -1,5 +1,5 @@
 {{!< default}}
-{{!-- 文章详情页 --}}
+{{!-- 通用页面 --}}
 {{#post}}
 <header style="background-image: url({{@blog.cover_image}})" class="header-small animated fadeIn">
 	<div class="header-top-nav">
@@ -8,6 +8,7 @@
 	<div class="header-middle">
 		<div class="header-middle-content animated fadeInUp">
 			<h2 class="header-title">{{title}}</h2>
+			<h4 class="header-description">{{excerpt}}</h4>
 		</div>
 	</div>
 </header>
@@ -24,6 +25,10 @@
 </div>
 {{/post}}
 
+{{!-- 引入评论 --}}
+{{> component/comments}}
+
+{{!-- 引入版权信息 --}}
 {{> copyright}}
 
 <div id="show-image-layer" class="hidden"></div>

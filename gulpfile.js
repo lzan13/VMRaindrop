@@ -35,7 +35,7 @@ gulp.task('css', function () {
 
 //压缩、合并js文件
 gulp.task('main:js', function () {
-    return gulp.src(['src/assets/js/jquery.min.js', 'src/assets/js/bootstrap.min.js', 'src/assets/js/pace.min.js',
+    return gulp.src(['src/assets/js/jquery.min.js', 'src/assets/js/pace.min.js',
         'src/assets/js/main.js'])
         .pipe(uglify())
         .pipe(concat('index.js'))

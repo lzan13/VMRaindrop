@@ -3,7 +3,11 @@
 {{!-- 引入头部内容 --}}
 {{> header}}
 <div class="site-content">
-    {{> loop}}
+    {{> post-card}}
+
+    {{#if pagination}}
+    {{pagination}}
+    {{/if}}
 </div>
 {{!-- 引入版权信息 --}}
 {{> copyright}}

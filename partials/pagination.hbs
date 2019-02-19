@@ -1,15 +1,11 @@
 <div class="post-list-pagination">
-	<nav class="post-navigation">
-		<ul class="nav-links">
-			<li class="nav-previous {{#unless prev}}invisible{{/unless}}">
-				<a href="{{page_url prev}}"><i class="iconfont icon-prev"></i><span>上一页</span></a>
-			</li>
-			<li><span>- {{page}} / {{pages}} -</span></li>
-			<li class="nav-next {{#unless next}}invisible{{/unless}}">
-				<a href="{{page_url next}}"><span>下一页</span><i class="iconfont icon-next"></i></a>
-			</li>
-		</ul>
-	</nav>
+	<ul class="nav-links">
+		{{#if prev}}
+		<li class="nav-previous"><a href="{{page_url prev}}"><i class="iconfont icon-prev"></i><span>上一页</span></a></li>
+		{{/if}}
+		<li><span> {{page}} / {{pages}} </span></li>
+		{{#if next}}
+		<li class="nav-next"><a href="{{page_url next}}"><span>下一页</span><i class="iconfont icon-next"></i></a></li>
+		{{/if}}
+	</ul>
 </div>
-
-

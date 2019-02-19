@@ -52,7 +52,7 @@ $(function () {
     });
 
     //退出大图模式
-    $('#show-image-wrapper').click(function () {
+    $('#show-image-layer').click(function () {
         exitFullScreen();
     });
 
@@ -87,22 +87,34 @@ function addBlankTargetForLinks() {
     });
 }
 
+/**
+ * 显示全屏查看图片
+ * @param {*} e 
+ */
 function showFullScreenImg(e) {
-    $('#show-image-layer,#show-image-wrapper').removeClass('hidden');
+    $('#show-image-layer').removeClass('is-hidden');
+    $('#show-image-layer').addClass('is-displayed');
     var img_src = $(e.target).attr('src');
-    $('#show-image-wrapper img').attr('src', img_src);
+    $('#show-image-layer img').attr('src', img_src);
     $('body').css('overflow', 'hidden');
 }
-
+/**
+ * 退出全屏查看图片
+ */
 function exitFullScreen() {
-    if ($('#show-image-layer').hasClass('hidden')) {
+    if ($('#show-image-layer').hasClass('is-hidden')) {
         return;
     }
-    $('#show-image-layer,#show-image-wrapper').addClass('hidden');
-    $('#show-image-wrapper img').attr('src', '');
+    $('#show-image-layer').addClass('is-hidden');
+    $('#show-image-layer').removeClass('is-displayed');
+    $('#show-image-layer img').attr('src', '');
     $('body').removeAttr('style');
 }
 
+/**
+ * 复制代码
+ * @param {*} target 
+ */
 function copyCode(target) {
     var copy_text = $(target).nextAll('code').text();
     clipboard.copy(copy_text).then(function () {
@@ -111,7 +123,10 @@ function copyCode(target) {
     });
 }
 
-// 显示侧边栏
+/**
+ * 显示侧边文章目录
+ * @param {*} e 
+ */
 function showSlide(e) {
     $('.navbar-side').css('right', 0);
     $('.article-left').addClass('has-side');
@@ -130,7 +145,10 @@ function showSlide(e) {
     }, 10);
 }
 
-//关闭侧边栏
+/**
+ * 隐藏侧边文章目录
+ * @param {*} e 
+ */
 function hideSlide(e) {
     $('.navbar-side').css('right', '-308px');
     $('#toc').empty();

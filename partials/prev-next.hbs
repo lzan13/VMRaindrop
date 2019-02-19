@@ -1,17 +1,15 @@
-<div class="row">
-	<div class="col-md-8 col-md-offset-2">
-		<div class="prev-next-wrap">
-			{{#prev_post}}
-			<article class="prev-item">
-				<span class="iconfont icon-prev"></span><a href="{{url}}" class="title">{{title}}</a>
-			</article>
-			{{/prev_post}}
+<div class="prev-next">
+	<div class="prev-next-wrap">
+		{{#prev_post}}
+		<article class="prev-item">
+			<span class="iconfont icon-prev"></span><a href="{{url}}" class="title">{{title}}</a>
+		</article>
+		{{/prev_post}}
 
-			{{#next_post}}
-			<article class="next-item">
-				<a href="{{url}}" class="title">{{title}}</a><span class="iconfont icon-next"></span>
-			</article>
-			{{/next_post}}
-		</div>
+		{{#next_post}}
+		<article class="next-item">
+			<a href="{{url}}" class="title">{{title}}</a><span class="iconfont icon-next"></span>
+		</article>
+		{{/next_post}}
 	</div>
 </div>

@@ -1,14 +1,15 @@
 {
   "name": "vmraindrop",
-  "description": "一个修改自前人的 Ghost 自用主题",
-  "version": "1.0.0",
+  "description": "一个 Ghost 自用主题",
+  "version": "1.2.0",
   "license": "MIT",
   "author": {
     "name": "lzan13",
     "email": "lzan13@sina.com",
-    "url": "http://www.melove.net"
+    "url": "https://www.melove.net"
   },
   "engines": {
+    "ghost": ">=2.0.0",
     "ghost-api": "v2"
   },
   "config": {
