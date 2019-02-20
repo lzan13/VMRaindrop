@@ -12,28 +12,56 @@
         </div>
     </div>
     <div class="header-post-num">
+        <i class="iconfont icon-statistics"></i>
         <span>
             {{#get "posts" as | posts pages|}}共 {{pages.total}} 篇文章{{/get}}
         </span>
     </div>
 </header>
 <div class="site-content">
-    <div class="article-wrapper">
-        <div class="article-left">
-            <div class="article-content">
-                <div class="article-list">
-                    {{#get 'posts' limit='all' order='published_at desc'}}
-                    <ul>
-                        {{#foreach posts}}
-                        <li><span>{{date format="YYYY-MM-DD"}}</span> <a href='{{ url }}'>{{ title }}</a></li>
-                        {{/foreach}}
-                    </ul>
-                    {{/get}}
-                </div>
+    <div class="post-wrapper">
+        <div class="post-content">
+            <div id="archives-list">
+                {{#get 'posts' limit='all' order='published_at desc'}}
+                <ul>
+                    {{#foreach posts}}
+                    <li><span>{{date format="YYYY-MM-DD"}}</span> <a href='{{ url }}'>{{ title }}</a></li>
+                    {{/foreach}}
+                </ul>
+                {{/get}}
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    /**
+     * 调用ghost API，完成文章归档功能
+     * 所需组件：jQuery、moment.js
+     */
+    /**
+    $.get(ghost.url.api('posts', { limit: 'all', order: 'published_at desc' })).done(function (data) {
+        var posts = data.posts;
+        var count = posts.length;
+        for (var i = 0, pre_year = 0; i < count; i++) {
+            //调用moment.js对时间戳进行操作
+            var time = moment(posts[i].published_at);
+            var year = time.year();
+            var title = posts[i].title;
+            var url = posts[i].url;
+            if (year != pre_year) {
+                var html = "<h2>" + year + "</h2>" + "<ul id='year-" + year + "'></ul>";
+                $(html).appendTo("#archives-list");
+            }
+            var html = "<li><time>" + time.format("MM-DD") + "</time><a href='" + url + "'>" + title + "</a></li>";
+            $(html).appendTo("#year-" + year);
+            pre_year = year;
+        }
+    }).fail(function (err) {
+        console.log(err);
+    });
+    */
+</script>
 {{/post}}
 
 {{!-- 引入版权信息 --}}

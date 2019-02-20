@@ -13,25 +13,13 @@
 	</div>
 </header>
 <div class="site-content">
-	<div class="article-wrapper">
-		<div class="article-left">
-			<div class="article-content">
-				<article class="md-preview">
-					{{content}}
-				</article>
-			</div>
-		</div>
+	<div class="post-wrapper">
+		{{> post-content}}
 	</div>
+	{{!-- 引入评论 --}}
+	{{> comments}}
 </div>
 {{/post}}
 
-{{!-- 引入评论 --}}
-{{> comments}}
-
 {{!-- 引入版权信息 --}}
 {{> copyright}}
-
-<div id="show-image-layer" class="hidden"></div>
-<div id="show-image-wrapper" class="hidden">
-	<img src="" alt="">
-</div>

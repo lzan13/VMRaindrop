@@ -129,7 +129,6 @@ function copyCode(target) {
  */
 function showSlide(e) {
     $('.navbar-side').css('right', 0);
-    $('.article-left').addClass('has-side');
     //初始化toc
     $('#toc').toc({
         'selectors': 'h1,h2,h3', //elements to use as headings
@@ -152,9 +151,6 @@ function showSlide(e) {
 function hideSlide(e) {
     $('.navbar-side').css('right', '-308px');
     $('#toc').empty();
-    setTimeout(function () {
-        $('.article-left').removeClass('has-side');
-    }, 200);
 }
 
 //设置toc的位置

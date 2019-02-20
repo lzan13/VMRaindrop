@@ -2,14 +2,21 @@
 // 页面底部版权部分样式表
 // ------------------------------------------------
 .copyright {
-  background-color: @copyright-bg;
-  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1.5vh;
+  padding: 16px;
   text-align: center;
+  background-color: @copyright-bg;
   p {
-    margin: 0;
-    line-height: 1.6;
+    margin: auto;
+    line-height: 1.2;
     font-size: 13px;
     color: @copyright-text;
+    .all-rights-reserved {
+      margin-left: 5px;
+    }
     a{
       color: @copyright-text;
       &:hover{
@@ -17,8 +24,4 @@
       } 
     }
   }
-}
-
-.all-rights-reserved {
-  margin-left: 5px;
 }

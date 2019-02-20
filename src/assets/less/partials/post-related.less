@@ -2,21 +2,23 @@
 // 相关文章推荐部分样式表
 // ------------------------------------------------
 .related-posts-wrapper {
-  background: #f6f6f6;
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin: 20px auto 0;
-  padding: 16px;
+  background: @bg-translucence-grey;
   .related-post-title {
+    width: 100%;
+    max-width: 1200px;
+    margin: 16px auto;
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 25px;
     color: @title-dark;
-    padding-left: 10px;
-    border-left: 3px solid @active-link;
+    padding-left: 8px;
+    border-left: 4px solid @active-link;
   }
   .related-post-list {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -31,7 +33,7 @@
       min-height: 240px;
       max-width: 900px;
       &:before {
-        .cover-mixin;
+        .cover-shape;
         background: linear-gradient(to bottom, rgba(56, 56, 56, .25), rgba(56, 56, 56, .35) 100%);
         opacity: .4;
       }

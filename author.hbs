@@ -1,28 +1,28 @@
 {{!< default}}
-{{!-- 作者详情页 --}}
-<div class="author-page">
-	<header>
-		<div class="header-top-nav">
-			{{navigation}}
-		</div>
-	</header>
+{{!-- 作者页 --}}
+<header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@blog.cover_image}}{{/if}})"
+    class="header-small animated fadeIn">
+    <div class="header-top-nav">
+        {{navigation}}
+    </div>
+    <div class="header-middle">
+        <div class="header-middle-content animated fadeInUp">
+            <h2 class="header-title">{{tag.name}}</h2>
+            <h4 class="header-description">{{tag.description}}</h4>
+        </div>
+    </div>
+    <div class="header-post-num">
+        <i class="iconfont icon-statistics"></i><span>共 {{pagination.total}} 篇文章</span>
+    </div>
+</header>
 
-	<div class="author-container">
-		<div class="plane-wrapper">
-			<img src="{{asset 'images/plane.svg'}}" alt="">
-			<div class="rotate-container">
-				<img src="{{asset 'images/propeller.svg'}}" alt="">
-			</div>
-		</div>
-		<div class="about-me-content">
-			<h2>穿裤衩闯天下</h2>
-			<p>慢慢来，一步一个脚印 👣 </p>
-		</div>
-	</div>
+<div class="site-content">
+    {{> post-card}}
+
+    {{#if pagination}}
+    {{pagination}}
+    {{/if}}
 </div>
 
-
-
-
-
-
+{{!-- 引入版权信息 --}}
+{{> copyright}}

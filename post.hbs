@@ -19,14 +19,8 @@
 	<div class="header-post-tags">{{tags separator=""}}</div>
 </header>
 <div class="site-content">
-	<div class="article-wrapper">
-		<div class="article-left">
-			<div class="article-content">
-				<article class="md-preview">
-					{{content}}
-				</article>
-			</div>
-		</div>
+	<div class="post-wrapper">
+		{{> post-content}}
 		<nav class="navbar-side hidden">
 			<div class="toc-wrapper">
 				<a class="toc-btn">
@@ -39,8 +33,10 @@
 	<div class="post-footer">
 		{{> post-author}}
 		{{> post-prev-next}}
-		{{> post-recommend}}
+		{{> post-related}}
 	</div>
+	{{!-- 引入评论 --}}
+	{{> comments}}
 	<a id="go-to-top" href="#"><span class="iconfont icon-top"></span></a>
 </div>
 {{/post}}

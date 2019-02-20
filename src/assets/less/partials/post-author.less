@@ -1,0 +1,84 @@
+// ------------------------------------------------
+// 文章底部部分样式表
+// ------------------------------------------------
+
+.post-author {
+  // display: flex;
+  // flex-direction: row;
+  // align-items: flex-start;
+  // justify-content: center;
+  // border-top: 1px dashed @decoration-dark;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin:auto;
+  border-radius: 8px;
+  background: @bg-translucence-dark;
+  .author-image {
+    display: block;
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    top: -36px;
+    left: 50%;
+    margin-left: -36px;
+    padding: 6px;
+    z-index: 2;
+    box-sizing: border-box;
+    border-radius: 100%;
+    overflow: hidden;
+    background: @bg-light;
+    box-shadow: 0 0 0 1px @decoration-dark;
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      border-radius: 100%;
+    }
+  }
+  .author-info {
+    margin: 36px;
+    text-align: center;
+    width: 80%;
+    max-width: 970px;
+    h4 {
+      color: @desc-dark;
+      a {
+        color: @desc-dark;
+        text-decoration: none;
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+    p {
+      margin: 20px 0;
+      line-height: 1.9;
+    }
+    .author-meta {
+      margin: 20px 0 15px;
+      font-size: 14px;
+      line-height: 1;
+      font-style: italic;
+      color: @desc-dark;
+      a {
+        color: @desc-dark;
+        &:hover {
+          color: #333;
+        }
+      }
+      span {
+        display: inline-block;
+        margin-right: 20px;
+        word-wrap: break-word;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+

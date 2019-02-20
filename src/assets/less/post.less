@@ -1,85 +1,32 @@
 // ------------------------------------------------
-// 文章底部部分样式表
+// 文章部分样式表
 // ------------------------------------------------
-.post-footer {
+.post-wrapper {
   position: relative;
-  margin-top: 80px;
-  .post-author {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    border-top: 1px dashed #e6e6e6;
-    .author-image {
-      box-sizing: border-box;
-      display: block;
-      position: absolute;
-      top: -40px;
-      left: 50%;
-      margin-left: -40px;
-      width: 80px;
-      height: 80px;
-      border-radius: 100%;
-      overflow: hidden;
-      padding: 6px;
-      background: #fff;
-      z-index: 2;
-      box-shadow: #e7eef2 0 0 0 1px;
-      a {
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center center;
-        border-radius: 100%;
+  .post-content {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-bottom: 36px;
+    transition: all 0s;
+    &.has-side {
+      .post-content {
+        width: 90%;
       }
     }
-    .author-info {
-      margin: 36px 0 0;
-      text-align: center;
-      width: 55%;
-      max-width: 900px;
-      h4 {
-        color: @desc-dark;
-        a {
-          color: @desc-dark;
-          text-decoration: none;
-          &:hover {
-            color: #333;
-          }
-        }
-      }
-      p {
-        margin: 20px 0;
-        line-height: 1.9;
-      }
-      .author-meta {
-        margin: 20px 0 15px;
-        font-size: 14px;
-        line-height: 1;
-        font-style: italic;
-        color: @desc-dark;
-        a {
-          color: @desc-dark;
-          &:hover {
-            color: #333;
-          }
-        }
-        span {
-          display: inline-block;
-          margin-right: 20px;
-          word-wrap: break-word;
-          i {
-            margin-right: 5px;
-          }
-        }
-      }
+    H1::before, H2::before, H3::before, H4::before, H5::before, H6::before{
+      content: "#";
+      margin-right: 4px;
+      color: @active-link;
     }
   }
 }
 
+.post-footer{
+  margin-top: 36px;
+}
+
+// 文章返回顶部
 #go-to-top {
   display: inline-block;
   text-align: center;
@@ -101,38 +48,20 @@
 
   }
 }
-
+// 侧边目录导航
 .navbar-side {
   position: absolute;
   right: -308px;
   top: 0;
   width: 300px;
-  border-left: 1px solid @decoration;
+  border-left: 1px solid @decoration-dark;
   height: 100%;
   transition: all .2s;
 }
+
 @media(max-width:960px){
   .navbar-side{
     display: none;
-  }
-}
-
-.article-wrapper {
-  position: relative;
-}
-
-.article-left {
-  transition: all 0s;
-  &.has-side {
-    margin-right: 300px;
-    .article-content {
-      width: 90%;
-    }
-  }
-  .article-content {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
   }
 }
 
@@ -153,4 +82,37 @@
   &:hover {
     text-decoration: none !important;
   }
+}
+
+// 全屏查看图片样式
+.is-hidden{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  z-index: 0;
+}
+.is-displayed{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: @bg-translucence-dark;
+  z-index: 999;
+}
+
+#show-image-layer img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 5px 36px 2px @shadow-light;
 }
