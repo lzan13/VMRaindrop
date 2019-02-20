@@ -4,8 +4,9 @@
 .prev-next-wrap {
   display: flex;
   flex-direction: row;
-  max-width: 1200px;
-  margin: 20px auto;
+  width: 90%;
+  max-width: 1024px;
+  margin: 16px auto;
   .prev-item{
     flex-grow:1;
     display: flex;
@@ -28,10 +29,12 @@
     align-items: center;
     justify-content: flex-end;
     .iconfont{
-      font-size:20px;
+      font-size:24px;
       color: @active-link;
     }
     a{
+      font-size: 18px;
+      font-weight: 400;
       color: @subtitle-dark;
       &:hover{
         color: @active-link;
