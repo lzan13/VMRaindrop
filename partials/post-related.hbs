@@ -1,13 +1,10 @@
 {{#get "posts" limit="4" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" as |related|}}
 {{#if related.length}}
 <div class="related-posts-wrapper">
-	<div class="related-post-title">相关文章</div>
+	<h3 class="related-post-title">相关文章</h3>
 	<div class="related-post-list">
 		{{#foreach related}}
-		<a href="{{url}}"
-			style="background-image: url({{#if feature_image}}{{feature_image}} {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})">
-			<p>{{title}}</p>
-		</a>
+		<p></p><a href="{{url}}">{{title}}</a></p>
 		{{/foreach}}
 	</div>
 </div>

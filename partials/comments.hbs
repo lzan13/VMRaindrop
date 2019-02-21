@@ -1,10 +1,13 @@
 {{!-- 评论系统 --}}
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<div id="vcomments"></div>
+<div class="comments-container">
+    <h2 class="comments-title"><span>@</span>吐槽交流</h2>
+    <div id="comments-insert"></div>
+</div>
 <script>
     new Valine({
-        el: '#vcomments',
+        el: '#comments-insert',
         appId: 'O6QuB12NH3OxHBW440yLGXB4-gzGzoHsz',
         appKey: 'KWJPVlrWNLLlCyieRa22bFDf',
         notify: true,

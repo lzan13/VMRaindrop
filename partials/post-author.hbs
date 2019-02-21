@@ -1,18 +1,26 @@
 <div class="author">
-	{{#primary_author}}
 	<div class="post-author">
-		<figure class="author-image">
-			<a href="{{url}}" style="background-image: url({{img_url profile_image}})"></a>
-		</figure>
-		<section class="author-info">
-			<h4>
+		{{#primary_author}}
+		<div class="author-info">
+			<div class="author-image">
+				<a href="{{url}}" style="background-image: url({{img_url profile_image}})"></a>
+			</div>
+			<div class="author-name">
 				<a href="{{url}}">{{name}}</a>
-			</h4>
-			<p>{{bio}}</p>
-			<ul class="post-author-social-icon">
-				{{> social-icon}}
-			</ul>
-		</section>
+
+			</div>
+			<div class="post-author-social-icon">
+				<ul>{{> social-icon}}</ul>
+			</div>
+		</div>
+		<p class="author-desc">{{bio}}</p>
+		{{/primary_author}}
+		<div class="post-copyright">
+			<p>
+				<span>本文于 <time>{{date format="YYYY年MM月DD日"}}</time> 发表; 欢迎转载; </span>
+				<span id="{{url absolute=true}}" class="leancloud-visitors" data-flag-title="{{title}}">访问量 <i class="leancloud-visitors-count">999</i></span>
+			</p>
+			<p class="post-link">本博客文章如无特殊说明均为原创，转载需注明出处，本文地址: <a href="{{url absolute=true}}">{{url absolute=true}}</a></p>
+		</div>
 	</div>
-	{{/primary_author}}
 </div>

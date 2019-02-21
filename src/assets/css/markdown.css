@@ -94,6 +94,13 @@
     cursor: zoom-in;
 }
 
+.md-preview code{
+    color: #f59353;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background: #f8f8f8;
+}
+
 .md-preview .code {
     padding: 2px 4px;
     white-space: nowrap;
@@ -142,7 +149,7 @@ table tr th :last-child, table tr td :last-child {
 }
 
 .md-preview pre {
-    background: url(../../../assets/images/blueprint.png) #f7f7f9;
+    background: url(../../../assets/images/img-code-bg.png) #f7f7f9;
     background-size: 36px, 24px;
     border-radius: 0;
     border: none;
@@ -158,7 +165,7 @@ table tr th :last-child, table tr td :last-child {
 }
 
 .md-preview pre code {
-    color: #333;
+    color: #363636;
     white-space: pre;
     border: none;
     background: transparent;

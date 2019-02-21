@@ -7,23 +7,61 @@
     width: 90%;
     margin: 0 auto;
     max-width: 1024px;
-    padding-bottom: 36px;
+    padding-bottom: 24px;
     transition: all 0s;
     &.has-side {
       .post-content {
         width: 90%;
       }
     }
-    H1::before, H2::before, H3::before, H4::before, H5::before, H6::before{
-      content: "#";
-      margin-right: 4px;
-      color: @active-link;
+    H1, H2, H3, H4, H5, H6{
+      font-weight: 400;
+      &::before{
+        content: "#";
+        margin-right: 8px;
+        color: @active-link;
+      }
+    }
+    .md-preview{
+      blockquote{
+        border-left: 4px solid @decoration-dark;
+        font-style: normal;
+      }
+      .quote-center {
+        position: relative;
+        margin: 40px 0;
+        padding: 0;
+        text-align: center;
+        &::before, &::after {
+          position: absolute;
+          display: block;
+          content: ' ';
+          width: 100%;
+          height: 24px;
+          opacity: 0.2;
+          background-repeat: no-repeat;
+          background-position: 0 -6px;
+          background-size: 22px 22px;
+        }
+        &::before {
+          top: -20px;
+          background-image: url(../images/ic-quote-left.svg);
+          border-top: 1px solid @decoration-dark;
+        }
+        &::after {
+          bottom: -20px;
+          background-image: url(../images/ic-quote-right.svg);
+          border-bottom: 1px solid @decoration-dark;
+          background-position: 100% 8px;
+        }
+        p, div { text-align: center; }
+      }
     }
   }
 }
 
 .post-footer{
-  margin-top: 36px;
+  margin-top: 24px;
 }
 
 // 文章返回顶部

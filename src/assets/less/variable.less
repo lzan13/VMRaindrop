@@ -1,8 +1,9 @@
 /**
- * 定义样式变量，主要是颜色
+ * 定义样式变量
  */
 
 // 通用文本颜色
+// ---------------------------------------------------
 // 亮色
 @text-light: #fefefe;
 @title-light: #fefefe;
@@ -60,6 +61,7 @@
 @shadow-dark-hover: rgba(54, 54, 54, 0.8);
 
 // 封装阴影效果
+// ---------------------------------------------------
 .box-shadow(@x:0px, @y: 5px, @blur: 24px, @size:2px, @alpha: 0.08){
   box-shadow: @x @y @blur @size rgba(30, 30, 30, @alpha);
   -webkit-box-shadow: @x @y @blur @size rgba(30, 30, 30, @alpha);

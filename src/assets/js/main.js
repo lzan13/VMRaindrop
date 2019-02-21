@@ -24,5 +24,5 @@ $(function () {
  */
 function randomSiteCover() {
     var randomNum = Math.floor(Math.random() * 9 + 1);
-    $('.header-big').css('background-image', "url(" + Maple.blogUrl + "/assets/images/covers/cover_bg_" + randomNum + ".jpg)");
+    $('.header-big').css('background-image', "url(" + Maple.blogUrl + "/assets/images/covers/cover-bg-" + randomNum + ".jpg)");
 }

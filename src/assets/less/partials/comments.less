@@ -1,9 +1,25 @@
 // ------------------------------------------------
 // 评论部分样式表
 // ------------------------------------------------
-#vcomments {
+.comments-container {
   width: 90%;
   max-width: 1024px;
   margin: 16px auto;
   padding: 16px;
+  .comments-title{
+    width: 100%;
+    font-size: 24px;
+    font-weight: 400;
+    span{
+      margin-right: 8px;
+      color: @active-link;
+    }
+  }
+  #comments-insert{
+    width: 95%;
+    margin: 16px auto;
+    .info{
+      display: none;
+    }
+  }
 }
