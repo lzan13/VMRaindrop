@@ -1,7 +1,6 @@
 // ------------------------------------------------
-// 文章底部部分样式表
+// 文章底部作者信息部分样式表
 // ------------------------------------------------
-
 .post-author {
   position: relative;
   width: 80%;
@@ -39,6 +38,7 @@
       }
     }
     .author-name{
+      align-self: center;
       font-size: 16px;
       font-weight: 400;
       a{
@@ -48,6 +48,29 @@
         }
       }
     }
+    // 文章底部作者信息部分社交图标
+    .post-author-social-icon{
+      align-self: center;
+      ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          margin: 0 4px;
+          a {
+            color: @inactive-dark;
+            .iconfont{
+              font-size: 24px;
+            }
+            &:hover {
+              color: @active-dark;
+            }
+          }
+        }
+      }
+    } 
   }
   .author-desc{
     margin-top: 4px;

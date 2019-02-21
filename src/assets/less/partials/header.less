@@ -81,6 +81,36 @@
 // ------------------------------------------------
 // 首页头部特有内容样式表
 // ------------------------------------------------
+// 头部里面的社交
+.header-social-icon {
+  margin-top: 36px;
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0 8px;
+      a {
+        display: inline-block;
+        text-align: center;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        color: @inactive-light;
+        border-radius: 100%;
+        border: solid 2px rgba(210, 210, 210, .3);
+        .iconfont {
+          font-size: 24px; // 或者 font-size: 1em;
+        }
+        &:hover {
+          border: solid 2px rgba(255, 255, 255, .65);
+        }
+      }
+    }
+  }
+}
 // 向下的指示器
 .indicator {
   display: block;

@@ -1,4 +1,4 @@
-{{#get "posts" limit="4" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" as |related|}}
+{{#get "posts" limit="10" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" as |related|}}
 {{#if related.length}}
 <div class="related-posts-wrapper">
 	<h3 class="related-post-title">相关文章</h3>
