@@ -1,7 +1,8 @@
 {{!< default}}
 {{!-- 通用页面 --}}
 {{#post}}
-<header style="background-image: url({{@blog.cover_image}})" class="header-small animated fadeIn">
+<header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@blog.cover_image}}{{/if}})"
+	class="header-big animated fadeIn">
 	<div class="header-top-nav">
 		{{navigation}}
 	</div>
@@ -11,6 +12,9 @@
 			<h4 class="header-description">{{excerpt}}</h4>
 		</div>
 	</div>
+	<a class="indicator">
+		<i class="iconfont icon-arrow-down"></i>
+	</a>
 </header>
 <div class="site-content">
 	<div class="post-wrapper">

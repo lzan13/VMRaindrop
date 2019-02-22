@@ -1,7 +1,7 @@
 {{!< default}}
 {{!-- 作者页 --}}
 <header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@blog.cover_image}}{{/if}})"
-    class="header-small animated fadeIn">
+    class="header-big animated fadeIn">
     <div class="header-top-nav">
         {{navigation}}
     </div>
@@ -14,6 +14,10 @@
     <div class="header-post-num">
         <i class="iconfont icon-statistics"></i><span>共 {{pagination.total}} 篇文章</span>
     </div>
+
+    <a class="indicator">
+        <i class="iconfont icon-arrow-down"></i>
+    </a>
 </header>
 
 <div class="site-content">

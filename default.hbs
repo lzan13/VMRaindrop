@@ -11,17 +11,21 @@
 	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1039654_3atg667s3bm.css">
 	<link rel="stylesheet" href="{{asset 'css/style.min.css'}}">
 
-	<script src="{{asset 'js/index.min.js'}}"></script>
-	{{#is 'post'}}
-	<script src="{{asset 'js/post.min.js'}}"></script>
-	{{/is}}
-
 	{{ghost_head}}
 </head>
 
 <body class="{{body_class}}">
 	{{{body}}}
-	
+
+	<script src="{{asset 'js/index.min.js'}}"></script>
+	{{#is 'post'}}
+	<script src="{{asset 'js/post.min.js'}}"></script>
+	{{/is}}
+
+	<script>
+		window.VBlog = {};
+		VBlog.url = '{{@blog.url}}';
+	</script>
 	{{ghost_foot}}
 </body>
 

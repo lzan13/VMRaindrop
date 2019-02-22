@@ -1,25 +1,26 @@
 {{!< default}}
 {{!-- 标签云页面 --}}
-<header style="background-image: url({{@blog.cover_image}})" class="header-big animated fadeIn">
-  <div class="header-top-nav">
-    {{navigation}}
-  </div>
-  <div class="header-middle">
-    <div class="header-middle-content animated fadeInUp">
-      {{#post}}
-      <h2 class="header-title">{{title}}</h2>
-      <h4 class="header-description">{{excerpt}}</h4>
-
-      <div class="header-tags">
-        {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
-        {{#foreach tags}}
-        <a href='{{ url }}'>{{ name }}<span>{{ count.posts }}</span></a>
-        {{/foreach}}
-        {{/get}}
-      </div>
-      {{/post}}
+<header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@blog.cover_image}}{{/if}})"
+    class="header-big animated fadeIn">
+    <div class="header-top-nav">
+        {{navigation}}
     </div>
-  </div>
+    <div class="header-middle">
+        <div class="header-middle-content animated fadeInUp">
+            {{#post}}
+            <h2 class="header-title">{{title}}</h2>
+            <h4 class="header-description">{{excerpt}}</h4>
+
+            <div class="header-tags">
+                {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+                {{#foreach tags}}
+                <a href='{{ url }}'>{{ name }}<span>{{ count.posts }}</span></a>
+                {{/foreach}}
+                {{/get}}
+            </div>
+            {{/post}}
+        </div>
+    </div>
 </header>
 
 {{!-- 引入版权信息 --}}
