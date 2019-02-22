@@ -1,8 +1,7 @@
 {{!< default}}
 {{!-- 文章详情页 --}}
 {{#post}}
-<header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@blog.cover_image}}{{/if}})"
-    class="header-big animated fadeIn">
+<header {{#if feature_image}}style="background-image: url({{feature_image}})"{{/if}} class="header-big animated fadeIn">
 	<div class="header-top-nav">
 		{{navigation}}
 	</div>

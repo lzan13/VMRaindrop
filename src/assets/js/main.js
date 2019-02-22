@@ -27,10 +27,11 @@ $(function () {
  */
 function randomSiteCover() {
     var randomNum = Math.floor(Math.random() * 9 + 1);
-    // 这里先获取下要显示封面图部分的背景图是否已经有设置，如果已经设置，则不再设置随机背景图
+    /**
+     * 这里先获取下要显示封面图部分的背景图是否已经有设置，如果已经设置，则不再设置随机背景图
+     */ 
     var cover = $(".header-big").css("backgroundImage");
-    cover = cover.split("(\"")[1].split("\")")[0];
-    if(cover === VBlog.url + "/"){
+    if(cover === 'none'){
         $('.header-big').css('background-image', "url(" + VBlog.url + "/assets/images/covers/cover-bg-" + randomNum + ".jpg)");
     }
 }
