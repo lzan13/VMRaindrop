@@ -158,10 +158,6 @@
 // 标签头部特有内容样式表
 // ------------------------------------------------
 .header-post-num {
-  position: absolute;
-  width: 90%;
-  max-width: 1200px;
-  bottom: 8px;
   color: @text-light;
 }
 
@@ -188,22 +184,19 @@
 }
 // 头部标签
 .header-post-tags {
-  position: absolute;
-  bottom: 8px;
-  width: 90%;
-  max-width: 1200px;
   a {
     margin: 4px;
-    padding: 2px 8px;
+    padding: 4px 12px;
     border-radius: 24px;
-    background: @tag-bg-light;
-    color: @tag-dark;
+    border: 1px solid @decoration-light;
+    color: @tag-light;
     font-size: 13px;
     display: inline-block;
     &:hover {
+      background: @tag-bg-light;
       text-decoration: none;
-      background: @active-link;
-      color: @tag-light;
+      text-shadow: none;
+      color: @tag-dark;
     }
   }
 }

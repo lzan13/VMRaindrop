@@ -1,6 +1,12 @@
 {{#if navigation}}
-<nav class="main-nav">
-    <ul class="menu">
+<nav class="site-nav">
+    <div class="site-nav-logo">
+        <a href="{{@site.url}}">
+            {{#if @site.logo}}<img src="{{@site.logo}}" alt="{{@site.title}}" />{{/if}}
+            <span>{{@site.title}}</span>
+        </a>
+    </div>
+    <ul class="site-nav-list">
         {{#foreach navigation}}
         <li><a href="{{url}}">{{label}}</a></li>
         {{/foreach}}

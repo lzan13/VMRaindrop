@@ -1,7 +1,8 @@
 {{!< default}}
 {{!-- 文章详情页 --}}
 {{#post}}
-<header {{#if feature_image}}style="background-image: url({{feature_image}})"{{/if}} class="header-big animated fadeIn">
+<header {{#if feature_image}}style="background-image: url({{feature_image}})" {{/if}}
+	class="header-big animated fadeIn">
 	<div class="header-top-nav">
 		{{navigation}}
 	</div>
@@ -13,12 +14,12 @@
 				<span class="dotted">•</span>
 				<span>{{reading_time}}</span>
 			</div>
+			<div class="header-post-tags">{{tags separator=""}}</div>
 		</div>
 	</div>
-	<div class="header-post-tags">{{tags separator=""}}</div>
-    <a class="indicator">
-        <i class="iconfont icon-arrow-down"></i>
-    </a>
+	<a class="indicator">
+		<i class="iconfont icon-arrow-down"></i>
+	</a>
 </header>
 <div class="site-content">
 	<div class="post-wrapper">

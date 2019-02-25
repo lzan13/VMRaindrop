@@ -1,6 +1,7 @@
 {{!< default}}
 {{!-- 标签页 --}}
-<header {{#if feature_image}}style="background-image: url({{feature_image}})"{{/if}} class="header-big animated fadeIn">
+<header {{#if feature_image}}style="background-image: url({{feature_image}})" {{/if}}
+    class="header-big animated fadeIn">
     <div class="header-top-nav">
         {{navigation}}
     </div>
@@ -8,10 +9,10 @@
         <div class="header-middle-content animated fadeInUp">
             <h2 class="header-title">{{tag.name}}</h2>
             <h4 class="header-description">{{tag.description}}</h4>
+            <div class="header-post-num">
+                <i class="iconfont icon-tag"></i><span>共 {{pagination.total}} 篇文章</span>
+            </div>
         </div>
-    </div>
-    <div class="header-post-num">
-        <i class="iconfont icon-tag"></i><span>共 {{pagination.total}} 篇文章</span>
     </div>
     <a class="indicator">
         <i class="iconfont icon-arrow-down"></i>
