@@ -1,11 +1,10 @@
 <div class="posts-container">
     {{#foreach posts}}
     <article class="post">
-        <div class="post-card">
+        <div class="post-card" href="{{url}}" target="_blank">
             <!--文章封面-->
             <div class="post-cover">
-                <a class="cover-image cover-transition" href="{{url}}" target="_blank"
-                    style="background-image: url({{#if feature_image}}{{feature_image}} {{else}}{{asset 'images/img-default-cover.jpg'}}{{/if}})"></a>
+                <a class="cover-image cover-transition" {{#if feature_image}}style="background-image: url({{feature_image}})" {{/if}}></a>
                 {{#if tags}}
                 <div class="cover-bottom">
                     <div class="post-tags">
