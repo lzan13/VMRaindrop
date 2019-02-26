@@ -1,10 +1,11 @@
 <div class="posts-container">
     {{#foreach posts}}
     <article class="post">
-        <div class="post-card" href="{{url}}" target="_blank">
+        <div class="post-card">
             <!--文章封面-->
             <div class="post-cover">
-                <a class="cover-image cover-transition" {{#if feature_image}}style="background-image: url({{feature_image}})" {{/if}}></a>
+                <a class="cover-image cover-transition" href="{{url}}" target="_blank" {{#if feature_image}} style="background-image: url({{feature_image}})"
+                    {{/if}}></a>
                 {{#if tags}}
                 <div class="cover-bottom">
                     <div class="post-tags">
@@ -19,7 +20,7 @@
                 <div class="item-content">
                     <h3 class="post-title"><a href="{{url}}" target="_blank">{{title}}</a></h3>
                     <p class="post-summary">
-                        {{excerpt characters="120"}}...
+                        <a href="{{url}}" target="_blank">{{excerpt characters="120"}}...</a>
                     </p>
                 </div>
                 <div class="item-footer">
