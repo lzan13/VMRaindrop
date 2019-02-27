@@ -3,9 +3,11 @@
 <div class="related-posts-wrapper">
 	<h3 class="related-post-title">相关文章</h3>
 	<div class="related-post-list">
-		{{#foreach related}}
-		<p></p><a href="{{url}}">{{title}}</a></p>
-		{{/foreach}}
+		<ul>
+			{{#foreach related}}
+			<li><a href="{{url}}">{{title}}</a></li>
+			{{/foreach}}
+		</ul>
 	</div>
 </div>
 {{/if}}
