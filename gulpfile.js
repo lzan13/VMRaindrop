@@ -35,16 +35,14 @@ gulp.task('css', function () {
 
 //压缩、合并js文件
 gulp.task('main:js', function () {
-    return gulp.src(['src/assets/js/jquery.min.js', 'src/assets/js/pace.min.js',
-        'src/assets/js/main.js'])
+    return gulp.src(['src/assets/js/jquery.min.js', 'src/assets/js/pace.min.js', 'src/assets/js/infinitescroll.min.js', 'src/assets/js/main.js'])
         .pipe(uglify())
         .pipe(concat('index.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('assets/js'))
 });
 gulp.task('post:js', function () {
-    return gulp.src(['src/assets/js/highlight.pack.js', 'src/assets/js/toc.js',
-        'src/assets/js/clipboard.min.js', 'src/assets/js/post.js'])
+    return gulp.src(['src/assets/js/highlight.pack.js', 'src/assets/js/toc.js', 'src/assets/js/clipboard.min.js', 'src/assets/js/post.js'])
         .pipe(uglify())
         .pipe(concat('post.js'))
         .pipe(rename({suffix: '.min'}))

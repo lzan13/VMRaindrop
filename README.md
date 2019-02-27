@@ -9,6 +9,7 @@ VMRaindrop
 ```
 <script>
     var enableRandomCover = true; //是否开启随机封面图，默认为true
+    var enableInfiniteScroll = true; //是否开启滚动加载更多，默认为true
 </script>
 ```
 

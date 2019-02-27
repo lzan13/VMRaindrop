@@ -1,11 +1,16 @@
-<div class="post-list-pagination">
-	<ul class="nav-links">
+<div class="pagination">
+	<div class="pagination-status">
+		<p class="infinite-scroll-request">正在加载更多...</p>
+		<p class="infinite-scroll-last">~ 我到底了 ~</p>
+		<p class="infinite-scroll-error">~ 没有更多需要加载了 ~</p>
+	</div>
+	<ul class="pagination-nav">
 		{{#if prev}}
-		<li class="nav-previous"><a href="{{page_url prev}}"><i class="iconfont icon-prev"></i><span>上一页</span></a></li>
+		<li class="pagination-previous"><a href="{{page_url prev}}"><i class="iconfont icon-prev"></i><span>上一页</span></a></li>
 		{{/if}}
 		<li><span> {{page}} / {{pages}} </span></li>
 		{{#if next}}
-		<li class="nav-next"><a href="{{page_url next}}"><span>下一页</span><i class="iconfont icon-next"></i></a></li>
+		<li class="pagination-next"><a href="{{page_url next}}"><span>下一页</span><i class="iconfont icon-next"></i></a></li>
 		{{/if}}
 	</ul>
 </div>

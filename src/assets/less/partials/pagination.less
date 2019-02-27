@@ -1,11 +1,17 @@
 // ------------------------------------------------
 // 分页器部分样式表
 // ------------------------------------------------
-.post-list-pagination {
+.pagination {
   width: 90%;
-  max-width: 970px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 16px;
+  .pagination-status{
+    display: none; 
+    padding-top: 18px;
+    text-align: center;
+    color: @desc-dark;
+  }
   ul {
     margin: 0;
     padding: 0;
@@ -20,11 +26,11 @@
       text-transform: uppercase;
       font-weight: bold;
       word-spacing: 2px;
-      &.nav-previous {
+      &.pagination-previous {
         float: left;
         margin-top: 2px;
       }
-      &.nav-next {
+      &.pagination-next {
         float: right;
         margin-top: 2px;
       }
