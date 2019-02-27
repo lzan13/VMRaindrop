@@ -10,13 +10,13 @@
         <div class="header-middle-content animated fadeInUp">
             <h2 class="header-title">{{title}}</h2>
             <h4 class="header-description">{{excerpt}}</h4>
+            <div class="header-post-num">
+                <i class="iconfont icon-statistics"></i>
+                <span>
+                    {{#get "posts" as | posts pages|}}共 {{pages.total}} 篇文章{{/get}}
+                </span>
+            </div>
         </div>
-    </div>
-    <div class="header-post-num">
-        <i class="iconfont icon-statistics"></i>
-        <span>
-            {{#get "posts" as | posts pages|}}共 {{pages.total}} 篇文章{{/get}}
-        </span>
     </div>
     <a class="indicator">
         <i class="iconfont icon-arrow-down"></i>
