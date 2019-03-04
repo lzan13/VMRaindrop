@@ -50,10 +50,9 @@ $(function () {
     $('.md-preview img').click(function (e) {
         showBigImage(e);
     });
-    
     // 点击查看原图
-    $('#show-image-layer a').click(function (e) {
-        showSrcImage(e);
+    $('#show-image-layer .show-image-src').click(function () {
+        showSrcImage();
     });
     // 退出大图模式
     $('#show-image-layer').click(function () {
@@ -100,7 +99,6 @@ function showBigImage(e) {
     $('#show-image-layer').addClass('is-displayed');
     var imgSrc = $(e.target).attr('src').replace(/(-v256|-v512|-v1024)/g, '');
     $('#show-image-layer img').attr('src', imgSrc);
-    $('#show-image-layer a').attr('href', imgSrc);
     $('body').css('overflow', 'hidden');
 }
 
@@ -108,7 +106,7 @@ function showBigImage(e) {
  * 查看原图
  */
 function showSrcImage(){
-    window.open($('#show-image-layer a').attr('href'));
+    window.open($('#show-image-layer img').attr('src'));
 }
 
 /**
@@ -121,7 +119,6 @@ function exitFullScreen() {
     $('#show-image-layer').addClass('is-hidden');
     $('#show-image-layer').removeClass('is-displayed');
     $('#show-image-layer img').attr('src', '');
-    $('#show-image-layer a').attr('href', '');
     $('body').removeAttr('style');
 }
 

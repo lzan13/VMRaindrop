@@ -170,19 +170,22 @@
 }
 
 #show-image-layer{
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
   img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95%;
+    max-height: 95%;
     box-shadow: 0 5px 36px 2px @shadow-dark;
   }
-  a{
-    color: @text-light;
+  .show-image-src{
+    position: absolute;
+    bottom: 16px;
     padding: 4px 16px;
-    margin: 4px;
+    color: @text-light;
     border-radius: 24px;
     border: 1px solid @bg-translucence-light;
+    background: @bg-translucence-grey;
+    &:hover{
+      cursor: pointer;
+      background: @bg-grey;
+    }
   }
 }
