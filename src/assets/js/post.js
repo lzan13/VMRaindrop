@@ -8,16 +8,16 @@ $(document).keydown(function (e) {
 });
 
 $(function () {
-    //代码高亮
+    // 代码高亮
     hljs.initHighlightingOnLoad();
 
-    //如果文章没有标题不会显示侧边栏
+    // 如果文章没有标题不会显示侧边栏
     var has_toc = $('.md-preview h1,.md-preview h2,.md-preview h3').length > 0;
     if (has_toc) {
         $('.navbar-side').removeClass('hidden');
     }
 
-    //显示或关闭侧边栏
+    // 显示或关闭侧边栏
     $('.toc-btn').click(function (e) {
         if ($(e.currentTarget).hasClass('show-toc')) {
             hideSlide(e);
@@ -28,12 +28,12 @@ $(function () {
 
     });
 
-    //toc滚动设置
+    // toc滚动设置
     $(window).scroll(function () {
         setTocPosition();
     });
 
-    //回到顶部
+    // 回到顶部
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 300) {
             $('#go-to-top').fadeIn(300);
@@ -46,22 +46,26 @@ $(function () {
         return false;
     });
 
-    //点击看大图
+    // 点击看大图
     $('.md-preview img').click(function (e) {
-        showFullScreenImg(e);
+        showBigImage(e);
     });
-
-    //退出大图模式
+    
+    // 点击查看原图
+    $('#show-image-layer a').click(function (e) {
+        showSrcImage(e);
+    });
+    // 退出大图模式
     $('#show-image-layer').click(function () {
         exitFullScreen();
     });
 
-    //为超链接加上target='_blank'属性
+    // 为超链接加上target='_blank'属性
     $(document).bind('DOMNodeInserted', function () {
         addBlankTargetForLinks();
     });
 
-    //复制代码
+    // 复制代码
     $('.md-preview pre').hover(function () {
         var div_copy_code = "<a data-toggle='tooltip' data-placement='right' title='点击复制代码' class='copy-code-wrapper' onclick='copyCode(this);'>复制</a>";
         if ($(this).children('.copy-code-wrapper').length <= 0) {
@@ -88,16 +92,25 @@ function addBlankTargetForLinks() {
 }
 
 /**
- * 显示全屏查看图片
+ * 查看大图
  * @param {*} e 
  */
-function showFullScreenImg(e) {
+function showBigImage(e) {
     $('#show-image-layer').removeClass('is-hidden');
     $('#show-image-layer').addClass('is-displayed');
-    var img_src = $(e.target).attr('src');
-    $('#show-image-layer img').attr('src', img_src);
+    var imgSrc = $(e.target).attr('src').replace(/(-v256|-v512|-v1024)/g, '');
+    $('#show-image-layer img').attr('src', imgSrc);
+    $('#show-image-layer a').attr('href', imgSrc);
     $('body').css('overflow', 'hidden');
 }
+
+/**
+ * 查看原图
+ */
+function showSrcImage(){
+    window.open($('#show-image-layer a').attr('href'));
+}
+
 /**
  * 退出全屏查看图片
  */
@@ -108,6 +121,7 @@ function exitFullScreen() {
     $('#show-image-layer').addClass('is-hidden');
     $('#show-image-layer').removeClass('is-displayed');
     $('#show-image-layer img').attr('src', '');
+    $('#show-image-layer a').attr('href', '');
     $('body').removeAttr('style');
 }
 
