@@ -1,38 +1,41 @@
 <div class="posts-container">
     {{#foreach posts}}
     <article class="post-card">
-        <!--文章封面-->
-        <div class="post-cover">
-            <a class="cover-image cover-transition" href="{{url}}" target="_blank" {{#if feature_image}}
-                style="background-image: url({{feature_image}})" {{/if}}></a>
-            {{#if tags}}
-            <div class="cover-bottom">
-                <div class="post-tags">
-                    {{#foreach tags limit=4}}
-                    <a href="{{url}}" target="_blank">{{name}}</a>
-                    {{/foreach}}
+        <a href="{{url}}" target="_blank">
+            <!--文章封面-->
+            <div class="post-cover">
+                <span class="cover-image cover-transition" {{#if feature_image}}
+                    style="background-image: url({{feature_image}})" {{/if}}></span>
+            </div>
+            <div class="post-info">
+                <div class="item-content">
+                    <h3 class="post-title"><span>{{title}}</span></h3>
+                    <p class="post-summary">
+                        <span>{{excerpt characters="120"}}...</span>
+                    </p>
                 </div>
-            </div>
-            {{/if}}
-        </div>
-        <div class="post-info">
-            <div class="item-content">
-                <h3 class="post-title"><a href="{{url}}" target="_blank">{{title}}</a></h3>
-                <p class="post-summary">
-                    <a href="{{url}}" target="_blank">{{excerpt characters="120"}}...</a>
-                </p>
-            </div>
-            <div class="item-footer">
-                <div class="post-date">
-                    <div class="post-time">
-                        <i class="iconfont icon-time"></i><span>{{date format="YYYY/MM/DD"}}</span>
-                    </div>
-                    <div>
-                        <span>{{reading_time}}</span>
+                <div class="item-footer">
+                    <div class="post-date">
+                        <div class="post-time">
+                            <i class="iconfont icon-time"></i><span>{{date format="YYYY/MM/DD"}}</span>
+                        </div>
+                        <div>
+                            <span>{{reading_time}}</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </a>
+        {{#if tags}}
+        <div class="post-tags">
+            {{!-- {{#if primary_tag}}
+                <a class="tag" href="{{url}}" target="_blank">{{name}}<span>{{primary_tag.name}}</span></a>
+            {{/if}} --}}
+            {{#foreach tags limit=4}}
+            <a class="tag" href="{{url}}" target="_blank">{{name}}</a>
+            {{/foreach}}
         </div>
+        {{/if}}
     </article>
     {{/foreach}}
 </div>
