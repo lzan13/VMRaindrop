@@ -169,8 +169,23 @@
   z-index: 999;
 }
 
-#show-image-layer img {
-  max-width: 100%;
-  max-height: 100%;
-  box-shadow: 0 5px 36px 2px @shadow-dark;
+#show-image-layer{
+  img {
+    max-width: 95%;
+    max-height: 95%;
+    box-shadow: 0 5px 36px 2px @shadow-dark;
+  }
+  .show-image-src{
+    position: absolute;
+    bottom: 16px;
+    padding: 4px 16px;
+    color: @text-light;
+    border-radius: 24px;
+    border: 1px solid @bg-translucence-light;
+    background: @bg-translucence-grey;
+    &:hover{
+      cursor: pointer;
+      background: @bg-grey;
+    }
+  }
 }
