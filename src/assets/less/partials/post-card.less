@@ -5,14 +5,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
   .posts-pagination{
     text-align: center;
   }
 }
 
-@media(max-width:960px){
+@media(max-width:1200px){
+  .posts-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width:768px){
   .posts-container{
     display: grid;
     grid-template-columns: 1fr;
@@ -24,7 +30,7 @@
   position: relative;
   margin: 16px;
   border-radius: 8px;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   .card-shadow();
   &:hover {
     .card-shadow-hover();

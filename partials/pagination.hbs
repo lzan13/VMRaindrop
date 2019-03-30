@@ -6,11 +6,13 @@
 	</div>
 	<ul class="pagination-nav">
 		{{#if prev}}
-		<li class="pagination-previous"><a href="{{page_url prev}}"><i class="iconfont icon-prev"></i><span>上一页</span></a></li>
+		<li class="pagination-previous"><a href="{{page_url prev}}"><i
+					class="iconfont icon-arrow-left"></i><span>上一页</span></a></li>
 		{{/if}}
 		<li><span> {{page}} / {{pages}} </span></li>
 		{{#if next}}
-		<li class="pagination-next"><a href="{{page_url next}}"><span>下一页</span><i class="iconfont icon-next"></i></a></li>
+		<li class="pagination-next"><a href="{{page_url next}}"><span>下一页</span><i
+					class="iconfont icon-arrow-right"></i></a></li>
 		{{/if}}
 	</ul>
 </div>
